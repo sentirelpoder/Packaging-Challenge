@@ -5,7 +5,7 @@ Project description can be found at the root folder of repository. Knapsack algo
 recursion and memoization is used to find the solution.
 
 For memoization key is constructed as
-knapsack(<param1><param2>), because actually we skip the call exactly this function if it is called
+knapsack(param1,param2), because actually we skip the call exactly this function if it is called
 before. <b>HashMap</b> is used for instead of <b>2D array</b> because weight is double not integer.
 
 There is a util part of project which have <b>ItemBuilder</b>, <b>PackageFileParser</b> and <b>UTF8FileReader</b>
