@@ -16,7 +16,7 @@ class KnapsackTest {
      * 81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
      */
     @Test
-    void testRecursiveKnapsack() {
+    void testRecursiveKnapsackWithSixItem() {
         int maxWeight = 81;
         Item[] items = new Item[6];
         items[0] = new Item(1, 53.38, 45);
@@ -39,7 +39,7 @@ class KnapsackTest {
      * 8 : (1,15.3,€34)
      */
     @Test
-    void testRecursiveKnapsack2() {
+    void testRecursiveKnapsackWithOneItem() {
         int maxWeight = 8;
         Item[] items = new Item[1];
         items[0] = new Item(1, 15.3, 34);
@@ -56,7 +56,7 @@ class KnapsackTest {
      * 75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
      */
     @Test
-    void testRecursiveKnapsack3() {
+    void testRecursiveKnapsackWithNineItem() {
         int maxWeight = 75;
         Item[] items = new Item[9];
         items[0] = new Item(1, 85.31, 29);
@@ -82,7 +82,7 @@ class KnapsackTest {
      * 56 : (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
      */
     @Test
-    void testRecursiveKnapsack4() {
+    void testRecursiveKnapsackWithNineItemWithRepeatingCost() {
         int maxWeight = 56;
         Item[] items = new Item[9];
         items[0] = new Item(1, 90.72, 13);
