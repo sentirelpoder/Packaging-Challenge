@@ -25,6 +25,9 @@ public class Item implements Comparable<Item> {
         this.cost = cost;
     }
 
+    /**
+     * If Cost/Value is bigger, than we have this item in the beginning of array
+     */
     @Override
     public int compareTo(Item itemB) {
         double rateA = cost / weight;

@@ -33,6 +33,12 @@ public class PackerInput {
         validate();
     }
 
+    /**
+     * While constructing items from the line, assumed that input will always same as the example_input, with same space counts and currency
+     * <max_weight> : (<index>,<weight>,£<cost>) (<index>,<weight>,€<cost>)
+     * <max_weight> :
+     * <max_weight>
+     */
     private void validateInputPattern(String line) throws IncorrectInputPattern {
         Pattern pattern = Pattern.compile(INPUT_PATTERN);
         Matcher matcher = pattern.matcher(line);

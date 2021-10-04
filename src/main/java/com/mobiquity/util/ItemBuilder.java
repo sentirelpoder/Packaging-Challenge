@@ -9,6 +9,15 @@ public class ItemBuilder {
     private ItemBuilder() {
     }
 
+    /**
+     * Find items by separating data with space, and it removes ( and ), then it splits the remaining with ,
+     * we assume that input has the format validated in packerInput constructor
+     * e.g.
+     * (1,2,3) (2,3,4)
+     * then we have Item{1,2,3} and Item{2,3,4} as an array
+     * @param itemLineOnFile
+     * @return item array
+     */
     public static Item[] buildItems(String itemLineOnFile) {
         String[] items = itemLineOnFile.split(PackageConstants.ITEM_SEPARATOR);
         Item[] itemList = new Item[items.length];

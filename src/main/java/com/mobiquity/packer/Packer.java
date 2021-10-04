@@ -14,10 +14,8 @@ import static com.mobiquity.constant.PackageConstants.*;
 
 public class Packer {
 
-
     private Packer() {
     }
-
 
     /**
      * ASSIGNMENT SHEET:
