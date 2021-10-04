@@ -21,7 +21,8 @@ public class PackageConstants {
     public static final String PACKAGE_ITEM_SEPARATOR = ":";
     public static final String ITEM_SEPARATOR = " ";
     public static final String ITEM_DATA_SEPARATOR = ",";
-    public static final String NEW_LINE = "\n";
     public static final String NO_ITEM = "-";
+    public static final String NEW_LINE = "line.separator";
+    public static final String INPUT_PATTERN = "^\\d+\\s?\\:\\s?(\\(\\d+,\\d+\\.?\\d*,€\\d+\\.?\\d*\\)\\s?)*";
 
 }

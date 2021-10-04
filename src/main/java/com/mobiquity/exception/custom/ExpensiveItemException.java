@@ -1,9 +1,11 @@
 package com.mobiquity.exception.custom;
 
-import static com.mobiquity.constant.PackageConstants.MAX_COST_OF_ITEM;
-import static com.mobiquity.exception.constant.ExceptionMessageConstants.EXPENSIVE_ITEM;
+import com.mobiquity.exception.APIException;
 
-public class ExpensiveItemException extends Exception {
+import static com.mobiquity.constant.PackageConstants.MAX_COST_OF_ITEM;
+import static com.mobiquity.constant.ExceptionMessageConstants.EXPENSIVE_ITEM;
+
+public class ExpensiveItemException extends APIException {
 
     public ExpensiveItemException() {
         super(String.format(EXPENSIVE_ITEM, MAX_COST_OF_ITEM));

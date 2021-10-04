@@ -15,8 +15,8 @@ public class PackageFileParser {
     }
 
     public static String getItemListPartOfLine(String line) throws NoItemToChooseException {
-        int indexOfPackageItemSpr = line.indexOf(PACKAGE_ITEM_SEPARATOR);
-        if (indexOfPackageItemSpr == -1 || line.length() < line.indexOf(PACKAGE_ITEM_SEPARATOR) + 2)
+        int indexOfPackageItemSeparator = line.indexOf(PACKAGE_ITEM_SEPARATOR);
+        if (indexOfPackageItemSeparator == -1 || line.length() < line.indexOf(PACKAGE_ITEM_SEPARATOR) + 3)
             throw new NoItemToChooseException();
         return line.substring(line.indexOf(PACKAGE_ITEM_SEPARATOR) + 2);
     }

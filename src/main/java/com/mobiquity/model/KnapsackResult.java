@@ -1,6 +1,5 @@
-package com.mobiquity.algorithm.model;
+package com.mobiquity.model;
 
-import com.mobiquity.model.Item;
 import lombok.Builder;
 import lombok.Data;
 

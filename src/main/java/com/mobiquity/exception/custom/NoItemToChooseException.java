@@ -1,8 +1,10 @@
 package com.mobiquity.exception.custom;
 
-import static com.mobiquity.exception.constant.ExceptionMessageConstants.NO_ITEM_TO_CHOOSE;
+import com.mobiquity.exception.APIException;
 
-public class NoItemToChooseException extends Exception {
+import static com.mobiquity.constant.ExceptionMessageConstants.NO_ITEM_TO_CHOOSE;
+
+public class NoItemToChooseException extends APIException {
 
     public NoItemToChooseException() {
         super(NO_ITEM_TO_CHOOSE);

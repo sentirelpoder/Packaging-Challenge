@@ -1,8 +1,10 @@
 package com.mobiquity.util;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +12,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UTF8FileReaderTest {
 
-    @Test
-    void testReadLines() {
+    static String PATH;
 
-        String filePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input";
+    @BeforeAll
+    static void init() {
+        PATH = FileSystems.getDefault()
+                .getPath("")
+                .toAbsolutePath()
+                .toString();
+    }
+    
+    @Test
+    void testReadLinesExampleInput() {
+
+        String filePath = PATH + "/src/main/test/resources/example_input";
         List<String> output = new ArrayList<>();
         output.add("81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)");
         output.add("8 : (1,15.3,€34)");
@@ -28,8 +40,8 @@ class UTF8FileReaderTest {
     }
 
     @Test
-    void testReadLines2() {
-        String filePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_output";
+    void testReadLinesExampleOutput() {
+        String filePath = PATH + "/src/main/test/resources/example_output";
         List<String> output = new ArrayList<>();
         output.add("4");
         output.add("-");

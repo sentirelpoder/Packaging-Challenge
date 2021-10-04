@@ -1,6 +1,6 @@
 package com.mobiquity.algorithm;
 
-import com.mobiquity.algorithm.model.KnapsackResult;
+import com.mobiquity.model.KnapsackResult;
 import com.mobiquity.model.Item;
 import org.junit.jupiter.api.Test;
 

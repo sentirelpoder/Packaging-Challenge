@@ -2,8 +2,10 @@ package com.mobiquity.packer;
 
 import com.mobiquity.exception.APIException;
 import com.mobiquity.util.UTF8FileReader;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.nio.file.FileSystems;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,10 +14,21 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class PackerTest {
 
+    static String PATH;
+
+    @BeforeAll
+    static void init() {
+        PATH = FileSystems.getDefault()
+                .getPath("")
+                .toAbsolutePath()
+                .toString();
+    }
+
     @Test
     void testPack() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input";
-        String outputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_output";
+        String inputFilePath = PATH
+                + "/src/main/test/resources/example_input";
+        String outputFilePath = PATH + "/src/main/test/resources/example_output";
 
         try {
             String output = UTF8FileReader.readLines(outputFilePath).stream().collect(Collectors.joining("\n")).concat("\n");
@@ -36,7 +49,7 @@ class PackerTest {
 
     @Test
     void testPackCapacityOverload() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input_capacity_overload";
+        String inputFilePath = PATH + "/src/main/test/resources/example_input_capacity_overload";
 
         try {
             Throwable exception = assertThrows(APIException.class, () -> Packer.pack(inputFilePath));
@@ -48,7 +61,7 @@ class PackerTest {
 
     @Test
     void testPackExpensiveItem() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input_expensive_item";
+        String inputFilePath = PATH + "/src/main/test/resources/example_input_expensive_item";
 
         try {
             Throwable exception = assertThrows(APIException.class, () -> Packer.pack(inputFilePath));
@@ -60,7 +73,7 @@ class PackerTest {
 
     @Test
     void testPackNoItem() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input_no_item";
+        String inputFilePath = PATH + "/src/main/test/resources/example_input_no_item";
 
         try {
             Throwable exception = assertThrows(APIException.class, () -> Packer.pack(inputFilePath));
@@ -72,7 +85,7 @@ class PackerTest {
 
     @Test
     void testPackTooHeavy() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input_too_heavy";
+        String inputFilePath = PATH + "/src/main/test/resources/example_input_too_heavy";
 
         try {
             Throwable exception = assertThrows(APIException.class, () -> Packer.pack(inputFilePath));
@@ -84,7 +97,7 @@ class PackerTest {
 
     @Test
     void testPackTooMany() {
-        String inputFilePath = "/Users/setenayronael/Documents/Setenay/workspaces/Backend code assignment - Mobiquity 2021/src/main/test/resources/example_input_too_many";
+        String inputFilePath = PATH + "/src/main/test/resources/example_input_too_many";
 
         try {
             Throwable exception = assertThrows(APIException.class, () -> Packer.pack(inputFilePath));

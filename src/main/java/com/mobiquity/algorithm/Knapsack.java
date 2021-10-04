@@ -1,14 +1,15 @@
 package com.mobiquity.algorithm;
 
-import com.mobiquity.algorithm.model.KnapsackResult;
 import com.mobiquity.model.Item;
+import com.mobiquity.model.KnapsackResult;
 
 import java.util.*;
 
 public class Knapsack {
 
     /*To hide public one*/
-    private Knapsack() {}
+    private Knapsack() {
+    }
 
     public static KnapsackResult maximizeCostWithWeightLimit(Item[] items, double maxWeight) {
         items = removeItemsMoreThanMaxWeight(items, maxWeight);
