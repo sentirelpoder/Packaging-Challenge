@@ -6,8 +6,28 @@
   <artifactId>implementation</artifactId>
   <groupId>com.mobiquity</groupId>
   <version>1.0-SNAPSHOT</version>
-
   <modelVersion>4.0.0</modelVersion>
+  <name>package-challenge</name>
+  <description>Packaging code challenge for Mobility</description>
+  <properties>
+    <java.version>11</java.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.20</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
