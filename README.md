@@ -1,5 +1,5 @@
 # Packaging-Challenge
-Packaging code challenge for Mobility
+Packaging code challenge for Mobiquity
 
 Project description can be found at the root folder of repository. Knapsack algorithm with
 recursion and memoization is used to find the solution.
